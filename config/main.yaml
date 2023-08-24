@@ -20,3 +20,10 @@ zones:
       # - cloudflare
     targets:
       - edgedns
+
+  freecodecamp.rocks.:
+    sources:
+      - config
+      # - cloudflare
+    targets:
+      - edgedns
