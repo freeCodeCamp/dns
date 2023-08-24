@@ -1,0 +1,4 @@
+octodns==1.0.0
+octodns-cloudflare==0.0.2
+octodns-edgedns==0.0.3
+pip==23.2.1

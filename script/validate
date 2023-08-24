@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+octodns-validate \
+  --config-file ./config/main.yaml \
+  --debug

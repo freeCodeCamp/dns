@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+octodns-sync \
+  --config-file ./config/main.yaml \
+  --debug
