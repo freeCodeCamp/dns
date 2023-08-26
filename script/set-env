@@ -1,0 +1,26 @@
+#!/bin/bash
+set -e
+
+cd "$(dirname "$0")"/..
+ROOT=$(pwd)
+
+# Virtualenv
+if [ -z "$VENV_NAME" ]; then
+  VENV_NAME="env"
+fi
+
+if [ ! -d "$VENV_NAME" ]; then
+  if [ -z "$VENV_PYTHON" ]; then
+    VENV_PYTHON=$(command -v python3)
+  fi
+  "$VENV_PYTHON" -m venv "$VENV_NAME"
+fi
+. "$VENV_NAME/bin/activate"
+
+# Source the environment variables
+if [ -f "$ROOT/.env" ]; then
+  echo "Sourcing environment variables from $ROOT/.env"
+  set -a
+  source "$ROOT/.env"
+  set +a
+fi

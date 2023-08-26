@@ -1,8 +1,6 @@
 NAME := dns
 SHELL := /bin/bash
 
-# Variables
-MK_cloudflare_token=$(CLOUDFLARE_TOKEN)
 .DEFAULT_GOAL := help
 
 .PHONY: help
@@ -16,21 +14,17 @@ help:
 	@echo ""
 	@echo ""
 
-export_credentials:
-	@echo "Exporting credentials..."
-	set -e && export CLOUDFLARE_TOKEN=$(MK_cloudflare_token)
-
 .PHONY: bootstrap
 bootstrap:
 	@echo "Bootstraping..."
 	set -e && ./script/bootstrap
 
 .PHONY: validate
-validate: export_credentials
+validate:
 	@echo "Validating..."
 	set -e && ./script/validate
 
 .PHONY: plan
-plan: export_credentials
+plan:
 	@echo "Planning..."
 	set -e && ./script/plan

@@ -1,20 +1,6 @@
 #!/bin/bash
-
 set -e
-
-debug_flag=""
-
-while [[ $# -gt 0 ]]; do
-  case "$1" in
-  --debug)
-    debug_flag="--debug"
-    shift
-    ;;
-  *)
-    break
-    ;;
-  esac
-done
+. ./script/set-env
 
 octodns-sync \
   $debug_flag \

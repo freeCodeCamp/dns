@@ -1,21 +1,6 @@
 #!/bin/bash
-
 set -e
-
-cd "$(dirname "$0")"/..
-ROOT=$(pwd)
-
-if [ -z "$VENV_NAME" ]; then
-  VENV_NAME="env"
-fi
-
-if [ ! -d "$VENV_NAME" ]; then
-  if [ -z "$VENV_PYTHON" ]; then
-    VENV_PYTHON=$(command -v python3)
-  fi
-  "$VENV_PYTHON" -m venv "$VENV_NAME"
-fi
-. "$VENV_NAME/bin/activate"
+. ./script/set-env
 
 python -m pip install -U 'pip>=20'
 python -m pip install -r requirements.txt
