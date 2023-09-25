@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-. ./script/set-env
+. ./script/00-set-env
 
 octodns-sync \
   $debug_flag \

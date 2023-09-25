@@ -163,3 +163,4 @@ cython_debug/
 # DO NOT STORE ZONE FILES IN THE REPOSITORY
 # ========================================= #
 zones/
+tmp/

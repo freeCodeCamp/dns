@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+. ./script/00-set-env
+
+# $1: zone name
+# $2: provider name
+octodns-dump \
+  $debug_flag \
+  --config-file ./config/main.yaml \
+  --output-dir ./tmp \
+  $1 $2

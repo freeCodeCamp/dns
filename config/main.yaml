@@ -14,14 +14,13 @@ providers:
   #   client_token: env/AKAMAI_CLIENT_TOKEN
 
 zones:
-  freecodecamp.dev.:
+  freecodecamp.rocks.:
     sources:
       - config
       # - cloudflare
     targets:
       - edgedns
-
-  freecodecamp.rocks.:
+  freecodecamp.dev.:
     sources:
       - config
       # - cloudflare

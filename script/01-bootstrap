@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-. ./script/set-env
+. ./script/00-set-env
 
 python -m pip install -U 'pip>=20'
 python -m pip install -r requirements.txt
