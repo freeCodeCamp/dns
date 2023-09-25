@@ -26,3 +26,9 @@ zones:
       # - cloudflare
     targets:
       - edgedns
+  freecodecamp.org.:
+    sources:
+      - config
+      # - cloudflare
+    targets:
+      - edgedns
