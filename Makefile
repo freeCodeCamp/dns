@@ -6,6 +6,7 @@ BOOTSTRAP_SCRIPT := ./script/01-bootstrap
 DUMP_SCRIPT := ./script/02-dump
 VALIDATE_SCRIPT := ./script/03-validate
 PLAN_SCRIPT := ./script/04-plan
+APPLY_SCRIPT := ./script/05-apply
 
 # Default target when 'make' is run without arguments
 .DEFAULT_GOAL := help
@@ -25,6 +26,7 @@ help:
 	@echo "  dump       - Dump configuration."
 	@echo "  validate   - Validate configuration."
 	@echo "  plan       - Plan configuration."
+	@echo "  apply      - Apply configuration."
 	@echo ""
 
 # Bootstraps the project
@@ -56,3 +58,9 @@ validate:
 plan:
 	@echo "Planning..."
 	@$(PLAN_SCRIPT) || { echo "Plan script failed!"; exit 1; }
+
+# Applies the configuration
+.PHONY: apply
+apply:
+	@echo "Applying..."
+	@$(APPLY_SCRIPT) || { echo "Apply script failed!"; exit 1; }

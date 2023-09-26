@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+. ./script/00-set-env
+
+octodns-sync \
+  $debug_flag \
+  --config-file ./config/main.yaml \
+  --doit

@@ -6,12 +6,12 @@ providers:
   cloudflare:
     class: octodns_cloudflare.CloudflareProvider
     token: env/CLOUDFLARE_TOKEN
-  # edgedns:
-  #   class: octodns_edgedns.AkamaiProvider
-  #   client_secret: env/AKAMAI_CLIENT_SECRET
-  #   host: env/AKAMAI_HOST
-  #   access_token: env/AKAMAI_ACCESS_TOKEN
-  #   client_token: env/AKAMAI_CLIENT_TOKEN
+  edgedns:
+    class: octodns_edgedns.AkamaiProvider
+    client_secret: env/AKAMAI_CLIENT_SECRET
+    host: env/AKAMAI_HOST
+    access_token: env/AKAMAI_ACCESS_TOKEN
+    client_token: env/AKAMAI_CLIENT_TOKEN
 
 zones:
   freecodecamp.rocks.:
@@ -26,9 +26,9 @@ zones:
       # - cloudflare
     targets:
       - edgedns
-  freecodecamp.org.:
-    sources:
-      - config
-      # - cloudflare
-    targets:
-      - edgedns
+  # freecodecamp.org.:
+  #   sources:
+  #     - config
+  #     # - cloudflare
+  #   targets:
+  #     - edgedns
