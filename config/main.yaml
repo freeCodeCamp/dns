@@ -17,18 +17,15 @@ zones:
   freecodecamp.rocks.:
     sources:
       - config
-      # - cloudflare
     targets:
-      - edgedns
+      - cloudflare
   freecodecamp.dev.:
     sources:
       - config
-      # - cloudflare
     targets:
-      - edgedns
+      - cloudflare
   # freecodecamp.org.:
   #   sources:
   #     - config
-  #     # - cloudflare
   #   targets:
-  #     - edgedns
+  #     - cloudflare
