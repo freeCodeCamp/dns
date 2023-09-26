@@ -37,8 +37,12 @@ bootstrap:
 .PHONY: dump
 dump:
 	@echo "Dumping..."
-	@read -p "Enter zone name: " zone; \
-	read -p "Enter provider name: " provider; \
+	@if [ -z "$(zone)" ]; then \
+		read -p "Enter zone name: " zone; \
+	fi; \
+	if [ -z "$(provider)" ]; then \
+		read -p "Enter provider name: " provider; \
+	fi; \
 	$(DUMP_SCRIPT) $$zone $$provider || { echo "Dump script failed!"; exit 1; }
 
 # Validates the configuration

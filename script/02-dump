@@ -8,4 +8,5 @@ octodns-dump \
   $debug_flag \
   --config-file ./config/main.yaml \
   --output-dir ./tmp \
+  --lenient \
   $1 $2
