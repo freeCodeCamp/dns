@@ -1,4 +1,4 @@
 octodns==1.2.1
-octodns-cloudflare==0.0.2
+octodns-cloudflare==0.0.3
 octodns-edgedns==0.0.3
 pip==23.2.1
